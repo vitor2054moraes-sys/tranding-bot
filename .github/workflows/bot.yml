@@ -38,5 +38,7 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-          git add data reports || true
+          git add data || true
+          git add reports || true
           git diff --staged --quiet || (git commit -m "bot: $(date -u +%FT%TZ)" && git pull --rebase && git push)
+
